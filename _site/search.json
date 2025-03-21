@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This blog is an RStudio Quarto project published at &lt;dtkaplan.github.io/SM25-student/&gt;. It is intended as a template for blogs for individual students in the Statistical Modeling course at University of Austin in Spring 2025. It is not open to the public, only to the students and instructor for the course.\nThere is not much content here. Instead, the project is to be used by students as they set up for the term. Each student will have their own blog to which they will add write-ups for assignments.\nFollow these steps:\n\nCreate a GitHub account. In picking a GitHub user ID, consider these alternatives.\n\nUse a professional-sounding ID which might be based on your name. For instance, the instructor’s GitHub ID is dtkaplan. This will make it possible for you to share your work with others, for instance as part of a job application. Use of GitHub is a valuable credential in the world of technology. Doing this is your decision. Note that your repository will be visible to anyone who knows your GitHub ID, so if you do not want your name publically associated with your work in this course, move on to alternative (b).\n\nWhy wouldn’t you want your name associated with your work? Whatever your reasons, under the US Federal regulations constituting FERPA, the University of Austin is obliged to avoid releasing information about your being a student and such without permission. That’s what I’m signalling here: that releasing whatever information is contained in your Statistical Modeling blog is not a decision for UAustin but is entirely left to your personal discretion. Whatever you choose, your instructor will have access to your blog in the usual way for homework submissions and projects, et cetera.\n\nUse a name which does not identify you to the outside world. A good choice would be UATX-3820 or something similar. But make sure to write down your user name and share it with your instructor. You don’t have to include UATX in the user name. It’s entirely up to you. I encourage you not to pick a frivolous name.\n\nIn a browser tab, navigate to &lt;github.com/dtkaplan/SM25-student&gt;.\nOpen a new project in RStudio. This will be the project for your work in Statistical Modeling.\nIn a week or so, we will connect the RStudio project to GitHub so that your instructor (and anyone else you give your user name to) can access your work. But for the time being, we’ll just work in RStudio."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SM25-student",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 21, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 18, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  }
+]
