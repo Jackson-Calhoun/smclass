@@ -10,5 +10,17 @@
   },
   "index.qmd": {
     "index.html": "ba292998"
+  },
+  "posts/Week-1/index.qmd": {
+    "index.html": "fccdd890"
+  },
+  "getting_started.qmd": {
+    "getting_started.html": "f0bf0719"
+  },
+  "posts/Week-1/index-week1.qmd": {
+    "index-week1.html": "647aff96"
+  },
+  "posts/Week-2/index-week2.qmd": {
+    "index-week2.html": "090f8fd0"
   }
 }

@@ -1,5 +1,5 @@
 ---
-title: "SM25-student"
+title: "UATX Calculus Student Blog"
 listing:
   contents: posts
   sort: "date desc"
@@ -11,4 +11,6 @@ page-layout: full
 title-block-banner: true
 ---
 
+Each of your written assignments will take the form of a report. There will be roughly one such assignment per week. For the time being, we will name them `Week-1`, and so on.
 
+--------

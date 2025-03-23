@@ -1,0 +1,18 @@
+---
+title: "Spring Calculus: Week 1 "
+author: "make sure to enter your name!"
+date: "2025-04-05"
+categories: [vectors, vector spaces]
+image: "rooftops.jpg"
+---
+
+<!-- Leave this line alone. It should be in all your posts.-->
+{{< include ../../_start-up.qmd >}} 
+
+This is your first blog post. It may take you a while to get comfortable with the construction of these Quarto (`.qmd`) documents. Take it easy until you do. And when you need help, **ask for help!**
+
+I encourage a style where each R chunk has a `label=` which is set to a more-or-less random sequence of letters and numbers. This makes it easier, when there is a problem compiling a document, to locate the chunk that is causing an error.
+
+```{r label="W1-ehsl32d"}
+1 + 1
+```

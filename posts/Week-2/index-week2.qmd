@@ -1,0 +1,17 @@
+---
+title: "Spring Calculus: Week 2 "
+author: "Your name here!"
+date: "2025-04-12"
+categories: [transonic confabulation, vectors]
+image: "mindo.jpg"
+---
+
+<!-- Leave this line alone. It should be in all your posts.-->
+{{< include ../../_start-up.qmd >}} 
+
+
+By now, you are a little more comfortable working with these documents
+
+```{r label="W2-HESL"}
+1 + 2
+```

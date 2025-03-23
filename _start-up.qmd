@@ -1,0 +1,6 @@
+```{r include=FALSE}
+library(mosaicCalc)
+library(dplyr)
+library(LSTbook)
+library(ggformula)
+```

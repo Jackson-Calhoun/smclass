@@ -1,0 +1,15 @@
+{
+  "hash": "e300b1078477e284c8ba9bba5fb363e3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"UATX Spring Calculus: Week 1 \"\nauthor: \"make sure to enter your name!\"\ndate: \"2025-04-05\"\ncategories: [vectors, vector spaces]\nimage: \"image.jpg\"\n---\n\n\n\nThis is a post with executable code.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

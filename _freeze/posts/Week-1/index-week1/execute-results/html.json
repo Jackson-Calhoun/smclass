@@ -1,0 +1,15 @@
+{
+  "hash": "577e5080e83639fe679c64fdc69e31ef",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Spring Calculus: Week 1 \"\nauthor: \"make sure to enter your name!\"\ndate: \"2025-04-05\"\ncategories: [vectors, vector spaces]\nimage: \"rooftops.jpg\"\n---\n\n\n\n<!-- Leave this line alone. It should be in all your posts.-->\n\n\n\n\n\n\n\nThis is your first blog post. It may take you a while to get comfortable with the construction of these Quarto (`.qmd`) documents. Take it easy until you do. And when you need help, **ask for help!**\n\nI encourage a style where each R chunk has a `label=` which is set to a more-or-less random sequence of letters and numbers. This makes it easier, when there is a problem compiling a document, to locate the chunk that is causing an error.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -5,11 +5,14 @@ website:
   title: "SM25-student"
   navbar:
     right:
-      - about.qmd
+      - href: index.html
+        text: Home
+      - href: getting_started.qmd
+        text: Installing
 format:
   html:
     theme:
-      - cosmo
+      - lumen
     css: styles.css
 
 
