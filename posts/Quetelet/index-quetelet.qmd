@@ -1,0 +1,30 @@
+---
+title: "Spring Calculus: Quetelet"
+author: "Danny Kaplan"
+date: "2025-04-11"
+categories: [tidy data, biometrics]
+image: "picture.jpg"
+---
+
+<!-- Leave this line alone. It should be in all your posts.-->
+{{< include ../../_start-up.qmd >}} 
+
+## The raw data
+
+these data came 
+
+We agreed on these standards for transcription
+
+Link to CSV version of spreadsheet 
+
+```{r}
+qlink <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSz12IZ0XH9AOpJWwEN_leZ4DufCus6s1gk6-eoOQgZQrXxQY5n32xlWj1V3WKPX8YG2rArA82UfnM_/pub?output=csv"
+Qdata <- readr::read_csv(qlink)
+```
+
+
+## Cleaning/Validating the data 
+
+```{r}
+Qdata |> gf_point(weight ~ age, color = ~ sex)
+```
