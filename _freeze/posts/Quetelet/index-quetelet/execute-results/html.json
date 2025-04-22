@@ -1,0 +1,15 @@
+{
+  "hash": "d90a29fe5556bbd9caaf2cace4ee1f7b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Spring Calculus: Quetelet\"\nauthor: \"Danny Kaplan\"\ndate: \"2025-04-11\"\ncategories: [tidy data, biometrics]\nimage: \"picture.jpg\"\n---\n\n\n\n<!-- Leave this line alone. It should be in all your posts.-->\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
