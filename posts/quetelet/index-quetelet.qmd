@@ -1,0 +1,29 @@
+---
+title: "Quetelet"
+author: "Jackson Calhoun"
+date: "2025-04-11"
+categories: [tidy data, biometrics]
+image: "Quetelet.jpg"
+---
+
+<!-- Leave this line alone. It should be in all your posts.-->
+{{< include ../../_start-up.qmd >}} 
+
+We agreed on these standards for transcription
+
+## Reading in the data
+```{r}
+library(ggplot2)
+library(scales)
+library(ggridges)
+library(ggformula)
+Qdata <- readr::read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSz12IZ0XH9AOpJWwEN_leZ4DufCus6s1gk6-eoOQgZQrXxQY5n32xlWj1V3WKPX8YG2rArA82UfnM_/pub?output=csv")
+```
+
+## Cleaning and Validating the data
+```{r}
+Qdata |> gf_point(height ~ age, color = ~ sex)
+```
+
+
+

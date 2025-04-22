@@ -1,0 +1,17 @@
+{
+  "hash": "c51a3bde63c4fef0f806c1d42ed20c25",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quetelet\"\nauthor: \"Jackson Calhoun\"\ndate: \"2025-04-11\"\ncategories: [tidy data, biometrics]\nimage: \"Quetelet.jpg\"\n---\n\n\n\n<!-- Leave this line alone. It should be in all your posts.-->\n\n\n\n\n\n\n\nWe agreed on these standards for transcription\n\n## Reading in the data\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(ggridges)\nlibrary(ggformula)\nQdata <- readr::read_csv(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSz12IZ0XH9AOpJWwEN_leZ4DufCus6s1gk6-eoOQgZQrXxQY5n32xlWj1V3WKPX8YG2rArA82UfnM_/pub?output=csv\")\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nRows: 56 Columns: 4\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): sex\ndbl (3): age, height, weight\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n```\n\n\n:::\n:::\n\n\n\n## Cleaning and Validating the data\n\n\n::: {.cell}\n\n```{.r .cell-code}\nQdata |> gf_point(height ~ age, color = ~ sex)\n```\n\n::: {.cell-output-display}\n![](index-quetelet_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index-quetelet_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

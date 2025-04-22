@@ -1,0 +1,84 @@
+---
+Title: Statistical Modeling Assignment 2
+author: Jackson Calhoun
+date: 2025.04.19
+---
+## Problem 1
+```{r}
+library(mosaicData)
+library(LSTbook)
+library(mdsr)
+mosaicData::KidsFeet |> 
+  point_plot(
+    length ~ width + domhand + sex,
+    annot = "model")
+```
+a) 1 because all lines in the annotation band incline upwards as the length of the foot increases.
+b) boys tend to have wider feet because the annotation is higher for them, but there seems to be some overlap with the girls, so this claim should be treated with caution.
+c) I could not easily tell from the first graph, so I switched from width ~ length to length ~ width. This puts length as the response variable and on the y axis, so I can compare the bands and easily see that there is significant overlap, so one cannot claim that there is any difference between the length of boy's and girl's feet.
+d) boys tend to have wider feet than girls.
+```{r}
+KidsFeet |> 
+  point_plot( width ~ sex, annot = "model")
+```
+## Exercise 2
+```{r}
+library(mosaicData)
+CPSsmall <- CPS85 |>
+  filter(wage < 40)
+```
+```{r}
+CPSsmall |>
+  point_plot(wage ~ sex, annot = "model")
+```
+According to this plot, men tended to make higher wages in 1985
+
+b)
+```{r}
+CPSsmall |>
+  summarize(mean(wage), .by = sex)
+```
+c) There is no output which shows that no women fit the filter criteria.
+```{r}
+CPS85 |>
+  filter(sector == "const", sex == "F")
+```
+
+d) Sector theory cannot account for the difference in wages since men still tend to be paid more than women in every sector.
+```{r}
+CPS85 |> 
+  filter(wage <= 30, sector != "const") |> 
+  point_plot(
+    wage ~sex + 1 + sector,
+    annot = "model")
+```
+
+e)
+```{r}
+CPS85 |> 
+  filter(sector != "const") |>
+  summarize(mean_wage = mean(wage), .by = c(sector, sex)) |>
+  arrange(mean_wage)
+```
+
+## Excersize 3
+a) it works!
+```{r}
+Penguins |> head()
+```
+b) it works!
+```{r}
+head(Penguins)
+```
+
+c) nope!
+
+
+d) nope!
+
+
+e) nope!
+
+
+## Excersize 4
+The .by command instructs the computer to calculate the mean GDPpercap sepertately for each year, and then to filter for the countries whose GDPpercap was greater than the average *for that year*. Meanwhile, without the .by argument, the computer calculates the mean GDP for the *whole* dataset, and thus filters for the countries whose GDPpercap is greater than the mean for the whole dataset.

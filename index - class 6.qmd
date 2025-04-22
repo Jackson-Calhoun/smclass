@@ -1,0 +1,17 @@
+---
+title: Class 4
+author: Jackson Calhoun
+date: 2025.04.18
+---
+
+
+```{r}
+library(LSTbook)
+library(mdsr)
+set.seed(106)
+
+babynames::babynames |>
+  take_sample(n = 10) |>
+  filter(nchar(name) == 6)
+```
+

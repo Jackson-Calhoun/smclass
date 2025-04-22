@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "UATX Calculus Student Blog",
     "section": "",
-    "text": "Each of your written assignments will take the form of a report. There will be roughly one such assignment per week. For the time being, we will name them Week-1, and so on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpring Calculus: Week 2\n\n\n\n\n\n\ntransonic confabulation\n\n\nvectors\n\n\n\n\n\n\n\n\n\nApr 12, 2025\n\n\nYour name here!\n\n\n\n\n\n\n\n\n\n\n\n\nSpring Calculus: Week 1\n\n\n\n\n\n\nvectors\n\n\nvector spaces\n\n\n\n\n\n\n\n\n\nApr 5, 2025\n\n\nmake sure to enter your name!\n\n\n\n\n\n\nNo matching items"
+    "text": "Each of your written assignments will take the form of a report. There will be roughly one such assignment per week. For the time being, we will name them Week-1, and so on.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem 1\n\n\n\n\n\n\n\n\n\n\n\nApr 19, 2025\n\n\nJackson Calhoun\n\n\n\n\n\n\n\n\n\n\n\n\nSpring Calculus: Week 2\n\n\n\n\n\n\ntransonic confabulation\n\n\nvectors\n\n\n\n\n\n\n\n\n\nApr 12, 2025\n\n\nYour name here!\n\n\n\n\n\n\n\n\n\n\n\n\nQuetelet\n\n\n\n\n\n\ntidy data\n\n\nbiometrics\n\n\n\n\n\n\n\n\n\nApr 11, 2025\n\n\nJackson Calhoun\n\n\n\n\n\n\n\n\n\n\n\n\nSpring Calculus: Week 1\n\n\n\n\n\n\nvectors\n\n\nvector spaces\n\n\n\n\n\n\n\n\n\nApr 5, 2025\n\n\nmake sure to enter your name!\n\n\n\n\n\n\n\n\n\n\n\n\nStatistical Modeling Assignment 1\n\n\n\n\n\n\n\n\n\n\n\nApr 4, 2025\n\n\nJackson Calhoun\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week-1/index-week1.html",
@@ -26,5 +26,215 @@
     "title": "Getting Started",
     "section": "",
     "text": "This blog is an RStudio Quarto project published at &lt;dtkaplan.github.io/SM25-student/&gt;. It is intended as a template for blogs for individual students in the Statistical Modeling course at University of Austin in Spring 2025. It is not open to the public, only to the students and instructor for the course.\nThere is not much content here. Instead, the project is to be used by students as they set up for the term. Each student will have their own blog to which they will add write-ups for assignments.\nFollow these steps:\n\nCreate a GitHub account. In picking a GitHub user ID, consider these alternatives.\n\nUse a professional-sounding ID which might be based on your name. For instance, the instructor’s GitHub ID is dtkaplan. This will make it possible for you to share your work with others, for instance as part of a job application. Use of GitHub is a valuable credential in the world of technology. Doing this is your decision. Note that your repository will be visible to anyone who knows your GitHub ID, so if you do not want your name publically associated with your work in this course, move on to alternative (b).\n\nWhy wouldn’t you want your name associated with your work? Whatever your reasons, under the US Federal regulations constituting FERPA, the University of Austin is obliged to avoid releasing information about your being a student and such without permission. That’s what I’m signalling here: that releasing whatever information is contained in your Statistical Modeling blog is not a decision for UAustin but is entirely left to your personal discretion. Whatever you choose, your instructor will have access to your blog in the usual way for homework submissions and projects, et cetera.\n\nUse a name which does not identify you to the outside world. A good choice would be UATX-3820 or something similar. But make sure to write down your user name and share it with your instructor. You don’t have to include UATX in the user name. It’s entirely up to you. I encourage you not to pick a frivolous name.\n\nIn a browser tab, navigate to &lt;github.com/dtkaplan/SM25-student&gt;.\nOpen a new project in RStudio. This will be the project for your work in Statistical Modeling.\nIn a week or so, we will connect the RStudio project to GitHub so that your instructor (and anyone else you give your user name to) can access your work. But for the time being, we’ll just work in RStudio."
+  },
+  {
+    "objectID": "posts/quetelet/index-quetelet.html",
+    "href": "posts/quetelet/index-quetelet.html",
+    "title": "Quetelet",
+    "section": "",
+    "text": "We agreed on these standards for transcription"
+  },
+  {
+    "objectID": "posts/quetelet/index-quetelet.html#reading-in-the-data",
+    "href": "posts/quetelet/index-quetelet.html#reading-in-the-data",
+    "title": "Quetelet",
+    "section": "Reading in the data",
+    "text": "Reading in the data\n\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(ggridges)\nlibrary(ggformula)\nQdata &lt;- readr::read_csv(\"https://docs.google.com/spreadsheets/d/e/2PACX-1vSz12IZ0XH9AOpJWwEN_leZ4DufCus6s1gk6-eoOQgZQrXxQY5n32xlWj1V3WKPX8YG2rArA82UfnM_/pub?output=csv\")\n\nRows: 56 Columns: 4\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (1): sex\ndbl (3): age, height, weight\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "posts/quetelet/index-quetelet.html#cleaning-and-validating-the-data",
+    "href": "posts/quetelet/index-quetelet.html#cleaning-and-validating-the-data",
+    "title": "Quetelet",
+    "section": "Cleaning and Validating the data",
+    "text": "Cleaning and Validating the data\n\nQdata |&gt; gf_point(height ~ age, color = ~ sex)"
+  },
+  {
+    "objectID": "index - class 6.html",
+    "href": "index - class 6.html",
+    "title": "Class 4",
+    "section": "",
+    "text": "library(LSTbook)\nlibrary(mdsr)\nset.seed(106)\n\nbabynames::babynames |&gt;\n  take_sample(n = 10) |&gt;\n  filter(nchar(name) == 6)\n\n# A tibble: 3 × 5\n   year sex   name       n       prop\n  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;      &lt;dbl&gt;\n1  1934 M     Levern    27 0.0000254 \n2  1936 F     Carlee     6 0.00000557\n3  1993 M     Weylin     6 0.00000291"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html",
+    "href": "Statistical Modeling Assignment 1.html",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "",
+    "text": "babynames |&gt; \n  filter(n &gt; 40, n &lt;84) |&gt; \n  select(-prop)\n\n# A tibble: 151,461 × 4\n    year sex   name         n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt;\n 1  1880 F     Harriett    83\n 2  1880 F     Mable       83\n 3  1880 F     Myra        83\n 4  1880 F     Sophie      83\n 5  1880 F     Tillie      83\n 6  1880 F     Isabel      81\n 7  1880 F     Sylvia      81\n 8  1880 F     Carolyn     80\n 9  1880 F     Isabelle    80\n10  1880 F     Leila       80\n# ℹ 151,451 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  filter(nchar(name) == 6)\n\n# A tibble: 546,519 × 5\n    year sex   name       n    prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;   &lt;dbl&gt;\n 1  1880 F     Minnie  1746 0.0179 \n 2  1880 F     Bertha  1320 0.0135 \n 3  1880 F     Martha  1040 0.0107 \n 4  1880 F     Nellie   995 0.0102 \n 5  1880 F     Carrie   949 0.00972\n 6  1880 F     Bessie   796 0.00816\n 7  1880 F     Jennie   793 0.00812\n 8  1880 F     Hattie   769 0.00788\n 9  1880 F     Mattie   704 0.00721\n10  1880 F     Lillie   647 0.00663\n# ℹ 546,509 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  mutate(total = n/prop) |&gt; \n  filter(year == 1989)\n\n# A tibble: 23,773 × 6\n    year sex   name          n   prop    total\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n 1  1989 F     Jessica   47885 0.0240 1991890.\n 2  1989 F     Ashley    47587 0.0239 1991890.\n 3  1989 F     Brittany  37788 0.0190 1991890.\n 4  1989 F     Amanda    36828 0.0185 1991890.\n 5  1989 F     Sarah     27792 0.0140 1991890.\n 6  1989 F     Samantha  24791 0.0124 1991890.\n 7  1989 F     Jennifer  23995 0.0120 1991890.\n 8  1989 F     Stephanie 22767 0.0114 1991890.\n 9  1989 F     Lauren    21061 0.0106 1991889.\n10  1989 F     Elizabeth 20296 0.0102 1991890.\n# ℹ 23,763 more rows\n\n\n\n\n\n\nbabynames |&gt;\n  summarize(total = sum(n), .by = year)\n\n# A tibble: 138 × 2\n    year  total\n   &lt;dbl&gt;  &lt;int&gt;\n 1  1880 201484\n 2  1881 192696\n 3  1882 221533\n 4  1883 216946\n 5  1884 243462\n 6  1885 240854\n 7  1886 255317\n 8  1887 247394\n 9  1888 299473\n10  1889 288946\n# ℹ 128 more rows"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-1",
+    "href": "Statistical Modeling Assignment 1.html#problem-1",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "",
+    "text": "babynames |&gt; \n  filter(n &gt; 40, n &lt;84) |&gt; \n  select(-prop)\n\n# A tibble: 151,461 × 4\n    year sex   name         n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt;\n 1  1880 F     Harriett    83\n 2  1880 F     Mable       83\n 3  1880 F     Myra        83\n 4  1880 F     Sophie      83\n 5  1880 F     Tillie      83\n 6  1880 F     Isabel      81\n 7  1880 F     Sylvia      81\n 8  1880 F     Carolyn     80\n 9  1880 F     Isabelle    80\n10  1880 F     Leila       80\n# ℹ 151,451 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  filter(nchar(name) == 6)\n\n# A tibble: 546,519 × 5\n    year sex   name       n    prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;   &lt;dbl&gt;\n 1  1880 F     Minnie  1746 0.0179 \n 2  1880 F     Bertha  1320 0.0135 \n 3  1880 F     Martha  1040 0.0107 \n 4  1880 F     Nellie   995 0.0102 \n 5  1880 F     Carrie   949 0.00972\n 6  1880 F     Bessie   796 0.00816\n 7  1880 F     Jennie   793 0.00812\n 8  1880 F     Hattie   769 0.00788\n 9  1880 F     Mattie   704 0.00721\n10  1880 F     Lillie   647 0.00663\n# ℹ 546,509 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  mutate(total = n/prop) |&gt; \n  filter(year == 1989)\n\n# A tibble: 23,773 × 6\n    year sex   name          n   prop    total\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n 1  1989 F     Jessica   47885 0.0240 1991890.\n 2  1989 F     Ashley    47587 0.0239 1991890.\n 3  1989 F     Brittany  37788 0.0190 1991890.\n 4  1989 F     Amanda    36828 0.0185 1991890.\n 5  1989 F     Sarah     27792 0.0140 1991890.\n 6  1989 F     Samantha  24791 0.0124 1991890.\n 7  1989 F     Jennifer  23995 0.0120 1991890.\n 8  1989 F     Stephanie 22767 0.0114 1991890.\n 9  1989 F     Lauren    21061 0.0106 1991889.\n10  1989 F     Elizabeth 20296 0.0102 1991890.\n# ℹ 23,763 more rows\n\n\n\n\n\n\nbabynames |&gt;\n  summarize(total = sum(n), .by = year)\n\n# A tibble: 138 × 2\n    year  total\n   &lt;dbl&gt;  &lt;int&gt;\n 1  1880 201484\n 2  1881 192696\n 3  1882 221533\n 4  1883 216946\n 5  1884 243462\n 6  1885 240854\n 7  1886 255317\n 8  1887 247394\n 9  1888 299473\n10  1889 288946\n# ℹ 128 more rows"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-2",
+    "href": "Statistical Modeling Assignment 1.html#problem-2",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 2",
+    "text": "Problem 2\n\nfilter not select\n\n\nbabynames |&gt; \n  filter(n &gt;100)\n\n# A tibble: 230,074 × 5\n    year sex   name          n   prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;\n 1  1880 F     Mary       7065 0.0724\n 2  1880 F     Anna       2604 0.0267\n 3  1880 F     Emma       2003 0.0205\n 4  1880 F     Elizabeth  1939 0.0199\n 5  1880 F     Minnie     1746 0.0179\n 6  1880 F     Margaret   1578 0.0162\n 7  1880 F     Ida        1472 0.0151\n 8  1880 F     Alice      1414 0.0145\n 9  1880 F     Bertha     1320 0.0135\n10  1880 F     Sarah      1288 0.0132\n# ℹ 230,064 more rows\n\n\n\nNothing. Maybe don’t put a space after the - though…\n\n\nbabynames |&gt;\n  select(-year)\n\n# A tibble: 1,924,665 × 4\n   sex   name          n   prop\n   &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;\n 1 F     Mary       7065 0.0724\n 2 F     Anna       2604 0.0267\n 3 F     Emma       2003 0.0205\n 4 F     Elizabeth  1939 0.0199\n 5 F     Minnie     1746 0.0179\n 6 F     Margaret   1578 0.0162\n 7 F     Ida        1472 0.0151\n 8 F     Alice      1414 0.0145\n 9 F     Bertha     1320 0.0135\n10 F     Sarah      1288 0.0132\n# ℹ 1,924,655 more rows\n\n\n\ntoo many =\n\n\nbabynames |&gt; \n  mutate(name_length = nchar(name))\n\n# A tibble: 1,924,665 × 6\n    year sex   name          n   prop name_length\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;       &lt;int&gt;\n 1  1880 F     Mary       7065 0.0724           4\n 2  1880 F     Anna       2604 0.0267           4\n 3  1880 F     Emma       2003 0.0205           4\n 4  1880 F     Elizabeth  1939 0.0199           9\n 5  1880 F     Minnie     1746 0.0179           6\n 6  1880 F     Margaret   1578 0.0162           8\n 7  1880 F     Ida        1472 0.0151           3\n 8  1880 F     Alice      1414 0.0145           5\n 9  1880 F     Bertha     1320 0.0135           6\n10  1880 F     Sarah      1288 0.0132           5\n# ℹ 1,924,655 more rows\n\n\n\nadd filter, “M”\n\n\nbabynames |&gt; \n  filter(sex == \"M\") |&gt; \n  select(-prop)\n\n# A tibble: 786,372 × 4\n    year sex   name        n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;int&gt;\n 1  1880 M     John     9655\n 2  1880 M     William  9532\n 3  1880 M     James    5927\n 4  1880 M     Charles  5348\n 5  1880 M     George   5126\n 6  1880 M     Frank    3242\n 7  1880 M     Joseph   2632\n 8  1880 M     Thomas   2534\n 9  1880 M     Henry    2444\n10  1880 M     Robert   2415\n# ℹ 786,362 more rows\n\n\n\nyear unduly repeated\n\n\nbabynames |&gt; \n  select(year, sex)\n\n# A tibble: 1,924,665 × 2\n    year sex  \n   &lt;dbl&gt; &lt;chr&gt;\n 1  1880 F    \n 2  1880 F    \n 3  1880 F    \n 4  1880 F    \n 5  1880 F    \n 6  1880 F    \n 7  1880 F    \n 8  1880 F    \n 9  1880 F    \n10  1880 F    \n# ℹ 1,924,655 more rows\n\n\n\nNothing. Though it is overly repetative.\n\n\nbabynames |&gt; \n  group_by(n) |&gt; \n  summarize(ave = mean(n))\n\n# A tibble: 13,691 × 2\n       n   ave\n   &lt;int&gt; &lt;dbl&gt;\n 1     5     5\n 2     6     6\n 3     7     7\n 4     8     8\n 5     9     9\n 6    10    10\n 7    11    11\n 8    12    12\n 9    13    13\n10    14    14\n# ℹ 13,681 more rows\n\n\n\nNothing\n\n\nbabynames |&gt; \n  group_by(n &gt; 100) |&gt; \n  summarize(total = sum(n))\n\n# A tibble: 2 × 2\n  `n &gt; 100`     total\n  &lt;lgl&gt;         &lt;int&gt;\n1 FALSE      29777817\n2 TRUE      318342700"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-3",
+    "href": "Statistical Modeling Assignment 1.html#problem-3",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nThe problem was that summarize only returns the group by value and the summarized value, so once summarize was used, there was no am in the dataframe. adding am to the group_by() allows us to filter for it later.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n✔ readr     2.1.5     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmtcars |&gt;\n  group_by(cyl, am) |&gt;\n  summarize(avg_mpg = mean(mpg)) |&gt;\n  filter(am == 1)\n\n`summarise()` has grouped output by 'cyl'. You can override using the `.groups`\nargument.\n\n\n# A tibble: 3 × 3\n# Groups:   cyl [3]\n    cyl    am avg_mpg\n  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1     4     1    28.1\n2     6     1    20.6\n3     8     1    15.4"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-5",
+    "href": "Statistical Modeling Assignment 1.html#problem-5",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 5",
+    "text": "Problem 5\n\nmtcars |&gt;\n  group_by(cyl) |&gt;\n  summarize(\n    N = n(),\n    avg_mpg = mean(mpg)\n  )\n\n# A tibble: 3 × 3\n    cyl     N avg_mpg\n  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1     4    11    26.7\n2     6     7    19.7\n3     8    14    15.1\n\n\nN is the number of cars with the corresponding number of cylinders."
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-6",
+    "href": "Statistical Modeling Assignment 1.html#problem-6",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 6",
+    "text": "Problem 6\n\nsummarize\nmutate\narrange\nfilter\nselect"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#problem-12",
+    "href": "Statistical Modeling Assignment 1.html#problem-12",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 12",
+    "text": "Problem 12\nI’m unable to load nycflights13"
+  },
+  {
+    "objectID": "Statistical Modeling Assignment 1.html#suplementary-excersizes",
+    "href": "Statistical Modeling Assignment 1.html#suplementary-excersizes",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Suplementary excersizes",
+    "text": "Suplementary excersizes\n\narrange()\ngroup_by()\nselect()\nfilter()\nsummarize()\nmutate()"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html",
+    "title": "SM25-student",
+    "section": "",
+    "text": "library(mosaicData)\nlibrary(LSTbook)\nlibrary(mdsr)\nmosaicData::KidsFeet |&gt; \n  point_plot(\n    length ~ width + domhand + sex,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n1 because all lines in the annotation band incline upwards as the length of the foot increases.\nboys tend to have wider feet because the annotation is higher for them, but there seems to be some overlap with the girls, so this claim should be treated with caution.\nI could not easily tell from the first graph, so I switched from width ~ length to length ~ width. This puts length as the response variable and on the y axis, so I can compare the bands and easily see that there is significant overlap, so one cannot claim that there is any difference between the length of boy’s and girl’s feet.\nboys tend to have wider feet than girls.\n\n\nKidsFeet |&gt; \n  point_plot( width ~ sex, annot = \"model\")"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#problem-1",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#problem-1",
+    "title": "SM25-student",
+    "section": "",
+    "text": "library(mosaicData)\nlibrary(LSTbook)\nlibrary(mdsr)\nmosaicData::KidsFeet |&gt; \n  point_plot(\n    length ~ width + domhand + sex,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n1 because all lines in the annotation band incline upwards as the length of the foot increases.\nboys tend to have wider feet because the annotation is higher for them, but there seems to be some overlap with the girls, so this claim should be treated with caution.\nI could not easily tell from the first graph, so I switched from width ~ length to length ~ width. This puts length as the response variable and on the y axis, so I can compare the bands and easily see that there is significant overlap, so one cannot claim that there is any difference between the length of boy’s and girl’s feet.\nboys tend to have wider feet than girls.\n\n\nKidsFeet |&gt; \n  point_plot( width ~ sex, annot = \"model\")"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#exercise-2",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#exercise-2",
+    "title": "SM25-student",
+    "section": "Exercise 2",
+    "text": "Exercise 2\n\nlibrary(mosaicData)\nCPSsmall &lt;- CPS85 |&gt;\n  filter(wage &lt; 40)\n\n\nCPSsmall |&gt;\n  point_plot(wage ~ sex, annot = \"model\")\n\n\n\n\n\n\n\n\nAccording to this plot, men tended to make higher wages in 1985\n\n\n\n\nCPSsmall |&gt;\n  summarize(mean(wage), .by = sex)\n\n  sex mean(wage)\n1   M   9.994913\n2   F   7.728770\n\n\n\nThere is no output which shows that no women fit the filter criteria.\n\n\nCPS85 |&gt;\n  filter(sector == \"const\", sex == \"F\")\n\n [1] wage     educ     race     sex      hispanic south    married  exper   \n [9] union    age      sector  \n&lt;0 rows&gt; (or 0-length row.names)\n\n\n\nSector theory cannot account for the difference in wages since men still tend to be paid more than women in every sector.\n\n\nCPS85 |&gt; \n  filter(wage &lt;= 30, sector != \"const\") |&gt; \n  point_plot(\n    wage ~sex + 1 + sector,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n\n\n\nCPS85 |&gt; \n  filter(sector != \"const\") |&gt;\n  summarize(mean_wage = mean(wage), .by = c(sector, sex)) |&gt;\n  arrange(mean_wage)\n\n     sector sex mean_wage\n1     sales   F  5.241765\n2     manuf   F  5.713750\n3     other   F  5.801667\n4   service   F  6.059388\n5   service   M  7.226471\n6  clerical   F  7.404211\n7  clerical   M  7.489048\n8     other   M  8.761774\n9     manuf   M  9.302727\n10    sales   M  9.495714\n11    manag   F 11.056190\n12     prof   F 11.105000\n13     prof   M 12.773962\n14    manag   M 13.721765"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#excersize-3",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#excersize-3",
+    "title": "SM25-student",
+    "section": "Excersize 3",
+    "text": "Excersize 3\n\nit works!\n\n\nPenguins |&gt; head()\n\n# A tibble: 6 × 8\n  species island    bill_length bill_depth flipper  mass sex     year\n  &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;   &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n1 Adelie  Torgersen        39.1       18.7     181  3750 male    2007\n2 Adelie  Torgersen        39.5       17.4     186  3800 female  2007\n3 Adelie  Torgersen        40.3       18       195  3250 female  2007\n4 Adelie  Torgersen        36.7       19.3     193  3450 female  2007\n5 Adelie  Torgersen        39.3       20.6     190  3650 male    2007\n6 Adelie  Torgersen        38.9       17.8     181  3625 female  2007\n\n\n\nit works!\n\n\nhead(Penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length bill_depth flipper  mass sex     year\n  &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;   &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n1 Adelie  Torgersen        39.1       18.7     181  3750 male    2007\n2 Adelie  Torgersen        39.5       17.4     186  3800 female  2007\n3 Adelie  Torgersen        40.3       18       195  3250 female  2007\n4 Adelie  Torgersen        36.7       19.3     193  3450 female  2007\n5 Adelie  Torgersen        39.3       20.6     190  3650 male    2007\n6 Adelie  Torgersen        38.9       17.8     181  3625 female  2007\n\n\n\nnope!\nnope!\nnope!"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#excersize-4",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2c.html#excersize-4",
+    "title": "SM25-student",
+    "section": "Excersize 4",
+    "text": "Excersize 4\nThe .by command instructs the computer to calculate the mean GDPpercap sepertately for each year, and then to filter for the countries whose GDPpercap was greater than the average for that year. Meanwhile, without the .by argument, the computer calculates the mean GDP for the whole dataset, and thus filters for the countries whose GDPpercap is greater than the mean for the whole dataset."
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html",
+    "title": "SM25-student",
+    "section": "",
+    "text": "library(mosaicData)\nlibrary(LSTbook)\nlibrary(mdsr)\nmosaicData::KidsFeet |&gt; \n  point_plot(\n    length ~ width + domhand + sex,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n1 because all lines in the annotation band incline upwards as the length of the foot increases.\nboys tend to have wider feet because the annotation is higher for them, but there seems to be some overlap with the girls, so this claim should be treated with caution.\nI could not easily tell from the first graph, so I switched from width ~ length to length ~ width. This puts length as the response variable and on the y axis, so I can compare the bands and easily see that there is significant overlap, so one cannot claim that there is any difference between the length of boy’s and girl’s feet.\nboys tend to have wider feet than girls.\n\n\nKidsFeet |&gt; \n  point_plot( width ~ sex, annot = \"model\")"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#problem-1",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#problem-1",
+    "title": "SM25-student",
+    "section": "",
+    "text": "library(mosaicData)\nlibrary(LSTbook)\nlibrary(mdsr)\nmosaicData::KidsFeet |&gt; \n  point_plot(\n    length ~ width + domhand + sex,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n1 because all lines in the annotation band incline upwards as the length of the foot increases.\nboys tend to have wider feet because the annotation is higher for them, but there seems to be some overlap with the girls, so this claim should be treated with caution.\nI could not easily tell from the first graph, so I switched from width ~ length to length ~ width. This puts length as the response variable and on the y axis, so I can compare the bands and easily see that there is significant overlap, so one cannot claim that there is any difference between the length of boy’s and girl’s feet.\nboys tend to have wider feet than girls.\n\n\nKidsFeet |&gt; \n  point_plot( width ~ sex, annot = \"model\")"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#exercise-2",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#exercise-2",
+    "title": "SM25-student",
+    "section": "Exercise 2",
+    "text": "Exercise 2\n\nlibrary(mosaicData)\nCPSsmall &lt;- CPS85 |&gt;\n  filter(wage &lt; 40)\n\n\nCPSsmall |&gt;\n  point_plot(wage ~ sex, annot = \"model\")\n\n\n\n\n\n\n\n\nAccording to this plot, men tended to make higher wages in 1985\n\n\n\n\nCPSsmall |&gt;\n  summarize(mean(wage), .by = sex)\n\n  sex mean(wage)\n1   M   9.994913\n2   F   7.728770\n\n\n\nThere is no output which shows that no women fit the filter criteria.\n\n\nCPS85 |&gt;\n  filter(sector == \"const\", sex == \"F\")\n\n [1] wage     educ     race     sex      hispanic south    married  exper   \n [9] union    age      sector  \n&lt;0 rows&gt; (or 0-length row.names)\n\n\n\nSector theory cannot account for the difference in wages since men still tend to be paid more than women in every sector.\n\n\nCPS85 |&gt; \n  filter(wage &lt;= 30, sector != \"const\") |&gt; \n  point_plot(\n    wage ~sex + 1 + sector,\n    annot = \"model\")\n\n\n\n\n\n\n\n\n\n\n\n\nCPS85 |&gt; \n  filter(sector != \"const\") |&gt;\n  summarize(mean_wage = mean(wage), .by = c(sector, sex)) |&gt;\n  arrange(mean_wage)\n\n     sector sex mean_wage\n1     sales   F  5.241765\n2     manuf   F  5.713750\n3     other   F  5.801667\n4   service   F  6.059388\n5   service   M  7.226471\n6  clerical   F  7.404211\n7  clerical   M  7.489048\n8     other   M  8.761774\n9     manuf   M  9.302727\n10    sales   M  9.495714\n11    manag   F 11.056190\n12     prof   F 11.105000\n13     prof   M 12.773962\n14    manag   M 13.721765"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#excersize-3",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#excersize-3",
+    "title": "SM25-student",
+    "section": "Excersize 3",
+    "text": "Excersize 3\n\nit works!\n\n\nPenguins |&gt; head()\n\n# A tibble: 6 × 8\n  species island    bill_length bill_depth flipper  mass sex     year\n  &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;   &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n1 Adelie  Torgersen        39.1       18.7     181  3750 male    2007\n2 Adelie  Torgersen        39.5       17.4     186  3800 female  2007\n3 Adelie  Torgersen        40.3       18       195  3250 female  2007\n4 Adelie  Torgersen        36.7       19.3     193  3450 female  2007\n5 Adelie  Torgersen        39.3       20.6     190  3650 male    2007\n6 Adelie  Torgersen        38.9       17.8     181  3625 female  2007\n\n\n\nit works!\n\n\nhead(Penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length bill_depth flipper  mass sex     year\n  &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;   &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;int&gt;\n1 Adelie  Torgersen        39.1       18.7     181  3750 male    2007\n2 Adelie  Torgersen        39.5       17.4     186  3800 female  2007\n3 Adelie  Torgersen        40.3       18       195  3250 female  2007\n4 Adelie  Torgersen        36.7       19.3     193  3450 female  2007\n5 Adelie  Torgersen        39.3       20.6     190  3650 male    2007\n6 Adelie  Torgersen        38.9       17.8     181  3625 female  2007\n\n\n\nnope!\nnope!\nnope!"
+  },
+  {
+    "objectID": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#excersize-4",
+    "href": "posts/Assignment 2/index - Statistical Modeling Assignment 2.html#excersize-4",
+    "title": "SM25-student",
+    "section": "Excersize 4",
+    "text": "Excersize 4\nThe .by command instructs the computer to calculate the mean GDPpercap sepertately for each year, and then to filter for the countries whose GDPpercap was greater than the average for that year. Meanwhile, without the .by argument, the computer calculates the mean GDP for the whole dataset, and thus filters for the countries whose GDPpercap is greater than the mean for the whole dataset."
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html",
+    "href": "posts/index - Statistical Modeling Assignment 1.html",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "",
+    "text": "babynames |&gt; \n  filter(n &gt; 40, n &lt;84) |&gt; \n  select(-prop)\n\n# A tibble: 151,461 × 4\n    year sex   name         n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt;\n 1  1880 F     Harriett    83\n 2  1880 F     Mable       83\n 3  1880 F     Myra        83\n 4  1880 F     Sophie      83\n 5  1880 F     Tillie      83\n 6  1880 F     Isabel      81\n 7  1880 F     Sylvia      81\n 8  1880 F     Carolyn     80\n 9  1880 F     Isabelle    80\n10  1880 F     Leila       80\n# ℹ 151,451 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  filter(nchar(name) == 6)\n\n# A tibble: 546,519 × 5\n    year sex   name       n    prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;   &lt;dbl&gt;\n 1  1880 F     Minnie  1746 0.0179 \n 2  1880 F     Bertha  1320 0.0135 \n 3  1880 F     Martha  1040 0.0107 \n 4  1880 F     Nellie   995 0.0102 \n 5  1880 F     Carrie   949 0.00972\n 6  1880 F     Bessie   796 0.00816\n 7  1880 F     Jennie   793 0.00812\n 8  1880 F     Hattie   769 0.00788\n 9  1880 F     Mattie   704 0.00721\n10  1880 F     Lillie   647 0.00663\n# ℹ 546,509 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  mutate(total = n/prop) |&gt; \n  filter(year == 1989)\n\n# A tibble: 23,773 × 6\n    year sex   name          n   prop    total\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n 1  1989 F     Jessica   47885 0.0240 1991890.\n 2  1989 F     Ashley    47587 0.0239 1991890.\n 3  1989 F     Brittany  37788 0.0190 1991890.\n 4  1989 F     Amanda    36828 0.0185 1991890.\n 5  1989 F     Sarah     27792 0.0140 1991890.\n 6  1989 F     Samantha  24791 0.0124 1991890.\n 7  1989 F     Jennifer  23995 0.0120 1991890.\n 8  1989 F     Stephanie 22767 0.0114 1991890.\n 9  1989 F     Lauren    21061 0.0106 1991889.\n10  1989 F     Elizabeth 20296 0.0102 1991890.\n# ℹ 23,763 more rows\n\n\n\n\n\n\nbabynames |&gt;\n  summarize(total = sum(n), .by = year)\n\n# A tibble: 138 × 2\n    year  total\n   &lt;dbl&gt;  &lt;int&gt;\n 1  1880 201484\n 2  1881 192696\n 3  1882 221533\n 4  1883 216946\n 5  1884 243462\n 6  1885 240854\n 7  1886 255317\n 8  1887 247394\n 9  1888 299473\n10  1889 288946\n# ℹ 128 more rows"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-1",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-1",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "",
+    "text": "babynames |&gt; \n  filter(n &gt; 40, n &lt;84) |&gt; \n  select(-prop)\n\n# A tibble: 151,461 × 4\n    year sex   name         n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;    &lt;int&gt;\n 1  1880 F     Harriett    83\n 2  1880 F     Mable       83\n 3  1880 F     Myra        83\n 4  1880 F     Sophie      83\n 5  1880 F     Tillie      83\n 6  1880 F     Isabel      81\n 7  1880 F     Sylvia      81\n 8  1880 F     Carolyn     80\n 9  1880 F     Isabelle    80\n10  1880 F     Leila       80\n# ℹ 151,451 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  filter(nchar(name) == 6)\n\n# A tibble: 546,519 × 5\n    year sex   name       n    prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;   &lt;dbl&gt;\n 1  1880 F     Minnie  1746 0.0179 \n 2  1880 F     Bertha  1320 0.0135 \n 3  1880 F     Martha  1040 0.0107 \n 4  1880 F     Nellie   995 0.0102 \n 5  1880 F     Carrie   949 0.00972\n 6  1880 F     Bessie   796 0.00816\n 7  1880 F     Jennie   793 0.00812\n 8  1880 F     Hattie   769 0.00788\n 9  1880 F     Mattie   704 0.00721\n10  1880 F     Lillie   647 0.00663\n# ℹ 546,509 more rows\n\n\n\n\n\n\nbabynames |&gt; \n  mutate(total = n/prop) |&gt; \n  filter(year == 1989)\n\n# A tibble: 23,773 × 6\n    year sex   name          n   prop    total\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n 1  1989 F     Jessica   47885 0.0240 1991890.\n 2  1989 F     Ashley    47587 0.0239 1991890.\n 3  1989 F     Brittany  37788 0.0190 1991890.\n 4  1989 F     Amanda    36828 0.0185 1991890.\n 5  1989 F     Sarah     27792 0.0140 1991890.\n 6  1989 F     Samantha  24791 0.0124 1991890.\n 7  1989 F     Jennifer  23995 0.0120 1991890.\n 8  1989 F     Stephanie 22767 0.0114 1991890.\n 9  1989 F     Lauren    21061 0.0106 1991889.\n10  1989 F     Elizabeth 20296 0.0102 1991890.\n# ℹ 23,763 more rows\n\n\n\n\n\n\nbabynames |&gt;\n  summarize(total = sum(n), .by = year)\n\n# A tibble: 138 × 2\n    year  total\n   &lt;dbl&gt;  &lt;int&gt;\n 1  1880 201484\n 2  1881 192696\n 3  1882 221533\n 4  1883 216946\n 5  1884 243462\n 6  1885 240854\n 7  1886 255317\n 8  1887 247394\n 9  1888 299473\n10  1889 288946\n# ℹ 128 more rows"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-2",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-2",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 2",
+    "text": "Problem 2\n\nfilter not select\n\n\nbabynames |&gt; \n  filter(n &gt;100)\n\n# A tibble: 230,074 × 5\n    year sex   name          n   prop\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;\n 1  1880 F     Mary       7065 0.0724\n 2  1880 F     Anna       2604 0.0267\n 3  1880 F     Emma       2003 0.0205\n 4  1880 F     Elizabeth  1939 0.0199\n 5  1880 F     Minnie     1746 0.0179\n 6  1880 F     Margaret   1578 0.0162\n 7  1880 F     Ida        1472 0.0151\n 8  1880 F     Alice      1414 0.0145\n 9  1880 F     Bertha     1320 0.0135\n10  1880 F     Sarah      1288 0.0132\n# ℹ 230,064 more rows\n\n\n\nNothing. Maybe don’t put a space after the - though…\n\n\nbabynames |&gt;\n  select(-year)\n\n# A tibble: 1,924,665 × 4\n   sex   name          n   prop\n   &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;\n 1 F     Mary       7065 0.0724\n 2 F     Anna       2604 0.0267\n 3 F     Emma       2003 0.0205\n 4 F     Elizabeth  1939 0.0199\n 5 F     Minnie     1746 0.0179\n 6 F     Margaret   1578 0.0162\n 7 F     Ida        1472 0.0151\n 8 F     Alice      1414 0.0145\n 9 F     Bertha     1320 0.0135\n10 F     Sarah      1288 0.0132\n# ℹ 1,924,655 more rows\n\n\n\ntoo many =\n\n\nbabynames |&gt; \n  mutate(name_length = nchar(name))\n\n# A tibble: 1,924,665 × 6\n    year sex   name          n   prop name_length\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt;  &lt;dbl&gt;       &lt;int&gt;\n 1  1880 F     Mary       7065 0.0724           4\n 2  1880 F     Anna       2604 0.0267           4\n 3  1880 F     Emma       2003 0.0205           4\n 4  1880 F     Elizabeth  1939 0.0199           9\n 5  1880 F     Minnie     1746 0.0179           6\n 6  1880 F     Margaret   1578 0.0162           8\n 7  1880 F     Ida        1472 0.0151           3\n 8  1880 F     Alice      1414 0.0145           5\n 9  1880 F     Bertha     1320 0.0135           6\n10  1880 F     Sarah      1288 0.0132           5\n# ℹ 1,924,655 more rows\n\n\n\nadd filter, “M”\n\n\nbabynames |&gt; \n  filter(sex == \"M\") |&gt; \n  select(-prop)\n\n# A tibble: 786,372 × 4\n    year sex   name        n\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;int&gt;\n 1  1880 M     John     9655\n 2  1880 M     William  9532\n 3  1880 M     James    5927\n 4  1880 M     Charles  5348\n 5  1880 M     George   5126\n 6  1880 M     Frank    3242\n 7  1880 M     Joseph   2632\n 8  1880 M     Thomas   2534\n 9  1880 M     Henry    2444\n10  1880 M     Robert   2415\n# ℹ 786,362 more rows\n\n\n\nyear unduly repeated\n\n\nbabynames |&gt; \n  select(year, sex)\n\n# A tibble: 1,924,665 × 2\n    year sex  \n   &lt;dbl&gt; &lt;chr&gt;\n 1  1880 F    \n 2  1880 F    \n 3  1880 F    \n 4  1880 F    \n 5  1880 F    \n 6  1880 F    \n 7  1880 F    \n 8  1880 F    \n 9  1880 F    \n10  1880 F    \n# ℹ 1,924,655 more rows\n\n\n\nNothing. Though it is overly repetative.\n\n\nbabynames |&gt; \n  group_by(n) |&gt; \n  summarize(ave = mean(n))\n\n# A tibble: 13,691 × 2\n       n   ave\n   &lt;int&gt; &lt;dbl&gt;\n 1     5     5\n 2     6     6\n 3     7     7\n 4     8     8\n 5     9     9\n 6    10    10\n 7    11    11\n 8    12    12\n 9    13    13\n10    14    14\n# ℹ 13,681 more rows\n\n\n\nNothing\n\n\nbabynames |&gt; \n  group_by(n &gt; 100) |&gt; \n  summarize(total = sum(n))\n\n# A tibble: 2 × 2\n  `n &gt; 100`     total\n  &lt;lgl&gt;         &lt;int&gt;\n1 FALSE      29777817\n2 TRUE      318342700"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-3",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-3",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nThe problem was that summarize only returns the group by value and the summarized value, so once summarize was used, there was no am in the dataframe. adding am to the group_by() allows us to filter for it later.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n✔ readr     2.1.5     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmtcars |&gt;\n  group_by(cyl, am) |&gt;\n  summarize(avg_mpg = mean(mpg)) |&gt;\n  filter(am == 1)\n\n`summarise()` has grouped output by 'cyl'. You can override using the `.groups`\nargument.\n\n\n# A tibble: 3 × 3\n# Groups:   cyl [3]\n    cyl    am avg_mpg\n  &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;\n1     4     1    28.1\n2     6     1    20.6\n3     8     1    15.4"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-5",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-5",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 5",
+    "text": "Problem 5\n\nmtcars |&gt;\n  group_by(cyl) |&gt;\n  summarize(\n    N = n(),\n    avg_mpg = mean(mpg)\n  )\n\n# A tibble: 3 × 3\n    cyl     N avg_mpg\n  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1     4    11    26.7\n2     6     7    19.7\n3     8    14    15.1\n\n\nN is the number of cars with the corresponding number of cylinders."
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-6",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-6",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 6",
+    "text": "Problem 6\n\nsummarize\nmutate\narrange\nfilter\nselect"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#problem-12",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#problem-12",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Problem 12",
+    "text": "Problem 12\nI’m unable to load nycflights13"
+  },
+  {
+    "objectID": "posts/index - Statistical Modeling Assignment 1.html#suplementary-excersizes",
+    "href": "posts/index - Statistical Modeling Assignment 1.html#suplementary-excersizes",
+    "title": "Statistical Modeling Assignment 1",
+    "section": "Suplementary excersizes",
+    "text": "Suplementary excersizes\n\narrange()\ngroup_by()\nselect()\nfilter()\nsummarize()\nmutate()"
   }
 ]

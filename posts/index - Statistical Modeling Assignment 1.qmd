@@ -1,0 +1,124 @@
+---
+title: Statistical Modeling Assignment 1
+date: 2025.04.04
+author: Jackson Calhoun
+---
+## Problem 1
+a.
+```{r include=FALSE}
+library(LSTbook)
+library(babynames)
+?babynames
+```
+```{r}
+babynames |> 
+  filter(n > 40, n <84) |> 
+  select(-prop)
+```
+b. 
+```{r}
+babynames |> 
+  filter(nchar(name) == 6)
+```
+c.
+```{r}
+babynames |> 
+  mutate(total = n/prop) |> 
+  filter(year == 1989)
+```
+d.
+```{r}
+babynames |>
+  summarize(total = sum(n), .by = year)
+```
+
+## Problem 2
+
+a. filter not select
+```{r}
+babynames |> 
+  filter(n >100)
+```
+
+b. Nothing. Maybe don't put a space after the - though...
+```{r}
+babynames |>
+  select(-year)
+```
+
+c. too many =
+```{r}
+babynames |> 
+  mutate(name_length = nchar(name))
+```
+
+d. add filter, "M"
+```{r}
+babynames |> 
+  filter(sex == "M") |> 
+  select(-prop)
+```
+
+e. year unduly repeated
+```{r}
+babynames |> 
+  select(year, sex)
+```
+
+f. Nothing. Though it is overly repetative.
+```{r}
+babynames |> 
+  group_by(n) |> 
+  summarize(ave = mean(n))
+```
+
+g. Nothing
+```{r}
+babynames |> 
+  group_by(n > 100) |> 
+  summarize(total = sum(n))
+```
+
+## Problem 3
+The problem was that summarize only returns the group by value and the summarized value, so once summarize was used, there was no am in the dataframe. adding am to the group_by() allows us to filter for it later.
+```{r}
+library(tidyverse)
+mtcars |>
+  group_by(cyl, am) |>
+  summarize(avg_mpg = mean(mpg)) |>
+  filter(am == 1)
+```
+## Problem 5
+```{r}
+mtcars |>
+  group_by(cyl) |>
+  summarize(
+    N = n(),
+    avg_mpg = mean(mpg)
+  )
+```
+N is the number of cars with the corresponding number of cylinders.
+
+## Problem 6
+
+a. summarize
+b. mutate
+c. arrange
+d. filter
+e. select
+
+## Problem 12
+
+I'm unable to load nycflights13
+```{r}
+
+```
+
+## Suplementary excersizes
+
+ 1. arrange()
+ 2. group_by()
+ 3. select()
+ 4. filter()
+ 5. summarize()
+ 6. mutate()
